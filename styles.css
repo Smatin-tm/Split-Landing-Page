@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+
+:root{
+    --left-bg-color: rgba(51, 16, 0, 0.541);
+    --middle-bg-color:rgba(0, 0, 0, 0.5);
+    --right-bg-color:rgba(4, 0, 255, 0.383);
+    --hover-width:width:50vw;
+    --other-width:width:30vw;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    height:100vh;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.container{
+    width:100vw;
+    height:100%;
+    background:#444;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.windows{
+    width:33.3vw;
+    height:100%;
+    position: relative;
+    transition: width 0.4s ease;
+}
+
+.windows.left{
+    background-image:url('huawei.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+.windows.left::before{
+    content:'';
+    width:100%;
+    height:100%;
+    position: absolute;
+    background:var(--left-bg-color); 
+    z-index: 1;
+}
+
+
+.windows.middle{
+    background-image:url('dell.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+.windows.middle::before{
+    content:'';
+    width:100%;
+    height:100%;
+    position: absolute;
+    background:var(--middle-bg-color); 
+    z-index: 1;
+}
+
+.windows.right{
+    background-image:url('mac.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    right:0;
+
+}
+.windows.right::before{
+    content:'';
+    width:100%;
+    height:100%;
+    background:var(--right-bg-color); 
+    z-index: 1;
+    position:absolute;
+}
+
+.windows h2{
+    color:#fff;
+    font-size:2.5rem;
+    z-index: 2;
+    position: absolute;
+    left: 20%;
+    top:20%;
+    text-transform:uppercase;
+}
+.windows .btn{
+    z-index: 2;
+    position: absolute;
+    left: 20%;
+    top:38%;
+}
+
+.windows .btn:hover{
+    background-color:var(--left-btn-hover-color);
+    transition: background-color 0.3s ease;
+    border-color:#222;
+    border-radius: 3px;
+    background-color: rgba(34, 34, 34, 0.7);
+
+}    
+.btn{
+    width:130px;
+    height:40px;
+    border:0.1px solid #fff;
+    outline:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    font-size:1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+
+.wider{
+    width:60vw;
+    transition: width 0.4s ease;
+}
